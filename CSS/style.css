@@ -239,14 +239,15 @@ h5 {
 .social {
     text-align: center;
     margin: 5px auto;
-    z-index: 1;
-    width: 100%;
+    padding: 10px;
+    z-index: 3;
+    width: fit-content;
 }
 
 .home-page .text-content a {
-    margin: 0 2px;
+    margin: 0 5px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 5rem;
     color: #111;
 }
 
