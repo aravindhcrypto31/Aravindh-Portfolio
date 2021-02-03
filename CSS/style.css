@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+
+/*Navigation*/
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar li {
+    list-style-type: none;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #f2f2f2;
+    padding: 20px;
+    z-index: 2;
+}
+
+.afteropen {
+    display: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+/*Home Page*/
+
+.home-page {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 5px solid #111;
+    background-image: url(../Images/Beach.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-page .text-content {
+    background-color: rgba(255, 254, 254, 0.9);
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    border-bottom: 2vw #111 solid;
+}
+
+.home-page .text-content img {
+    width: 25vw;
+    height: 30vw;
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+}
+
+.home-page .text-content img:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.home-page .text-content h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.wordCarousel div {
+    overflow: hidden;
+    height: 65px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0 auto;
+    justify-content: right;
+}
+
+.wordCarousel i {
+    font-weight: bold;
+}
+
+.wordCarousel li {
+    justify-content: right;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 10px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: block;
+}
+
+.flip2 {
+    animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+    animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip2 {
+    0% {
+        margin-top: -180px;
+    }
+    5% {
+        margin-top: -90px;
+    }
+    50% {
+        margin-top: -90px;
+    }
+    55% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes flip3 {
+    0% {
+        margin-top: -270px;
+    }
+    5% {
+        margin-top: -180px;
+    }
+    33% {
+        margin-top: -180px;
+    }
+    38% {
+        margin-top: -90px;
+    }
+    66% {
+        margin-top: -90px;
+    }
+    71% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+.home-page .text-content a:hover {
+    opacity: 0.7;
+}
+
+.social {
+    text-align: center;
+    margin: 5px auto;
+    z-index: 1;
+    width: 100%;
+}
+
+.home-page .text-content a {
+    margin: 0 2px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+
+/*About Page*/
+
+.title-card {
+    width: fit-content;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 5px;
+    color: #111;
+    border-left: #111 10px solid;
+    background-color: #f2f2f2;
+    box-shadow: 0 3px 4px #111;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.about-page {
+    background-image: url(../Images/wave.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto;
+    height: fit-content;
+    border-top: 5px solid #111;
+    border-bottom: 5px solid #111;
+}
+
+.about-content {
+    background-color: #f2f2f2;
+    width: fit-content;
+    position: relative;
+    top: 20%;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
+    margin: 30px auto;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.about-content>img {
+    max-width: 70vw;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px auto;
+    border: 10px solid #f2f2f2;
+    box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.about-para {
+    border: 10px solid #f2f2f2;
+    display: block;
+    margin: 5px auto;
+    padding: 10px;
+    max-width: 70vw;
+    height: auto;
+    color: #111;
+    align-items: center;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 1.5vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .about-content .personal-info {
+    max-width: 70vw;
+    height: min-content;
+    padding: 10px;
+    margin: 5px auto;
+    display: block;
+    border-top: none;
+    border-left: 10px solid #f2f2f2;
+    border-right: 10px solid #f2f2f2;
+    border-bottom: 10px solid #f2f2f2;
+    box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(116, 116, 116, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1), inset -4px -4px 10px 0px rgba(116, 116, 116, 0.6), inset -4px -4px 5px 0px rgba(116, 116, 116, 0.6), inset 4px 4px 10px 0px rgba(0, 0, 0, 0.1), inset 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .about-content .personal-info label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #111;
+    font-size: 2vw;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.about-page .about-content .personal-info span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 1.5vw;
+}
+
+.personal-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personal-info ul li {
+    margin-bottom: 5px;
+    max-width: 50%;
+    flex: 50%;
+}
+
+
+/*Resume page*/
+
+.resume-page {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto;
+    height: fit-content;
+    border-top: 5px solid #111;
+    border-bottom: 5px solid #111;
+}
+
+
+/* Scrolldown */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

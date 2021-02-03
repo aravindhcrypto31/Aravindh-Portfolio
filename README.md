@@ -1,2 +1,2 @@
-# Aravindh-Portfolio
-//This is my portfolio website...
+# Portfolio
+This is my personal portfolio website
